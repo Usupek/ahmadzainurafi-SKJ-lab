@@ -1,0 +1,9 @@
+all: mpy_nums
+mpy_nums: mpy_nums.cpp
+	g++ -o mpy_nums mpy_nums.cpp
+dump: mpy_nums
+	objdump -d mpy_nums > mpy_nums.asm
+clean:
+	rm -f mpy_nums mpy_nums.asm
+run:	mpy_nums
+	./mpy_nums
